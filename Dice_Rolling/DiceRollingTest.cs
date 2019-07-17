@@ -9,16 +9,18 @@ namespace Dice_Rolling
             string rollAgain = "Y";
             Console.WriteLine("Welcome to the Dice Roll! Would you like to roll the dice? Y/N.");
             string userAnswer = Console.ReadLine().ToUpper();
+
             do
             {
                 // Ask the user how many sides they want their dice to have
                 // Check to make sure the user has entered a valid number
                 // and if they don't, ask them to enter another one
                 Console.WriteLine("How many sides do you want your die to have?");
+
                 try
                 {
                     int userNumber = int.Parse(Console.ReadLine());
-                    Console.WriteLine(DiceRolling.DiceRolls(userNumber));
+                    DiceRolling.DiceRolls(userNumber);
                 }
                 catch
                 {
